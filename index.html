@@ -6,34 +6,94 @@
     <title>Ani World</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <style>
+
+        .yellow-bg {
+            background-color: yellow;
+            color: black; /* Text color within the yellow background */
+        }
+        
+        .btn-dark {
+            background-color: black;
+            color: white; /* Text color for the "Sign Up" button */
+            border-color: black; /* Border color if needed */
+        }
+        
+        .classic-font {
+            font-family: 'Georgia', serif;
+            font-weight: bold;
+        }
+        
+        .text-uppercase {
+            text-transform: uppercase;
+        }
+        
+        .gl-cta {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #000; /* Black background */
+            color: #fff; /* White text */
+            border: none;
+            padding: 10px 20px;
+            text-transform: uppercase;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        
+        .gl-cta--primary {
+            background-color: #000; /* Black background */
+        }
+        
+        .gl-cta__content {
+            margin-right: 10px;
+        }
+        
+        .gl-icon__wrapper {
+            display: inline-flex;
+            align-items: center;
+        }
+        
+        .gl-icon {
+            fill: #fff; /* White icon */
+        }
+        
+        .extended-box {
+            padding: 30px 40px; /* Adjust padding to make the box longer */
+            width: 100%; /* Ensure it takes the full width of the column */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow for enhancement */
+            border: 1px solid #000; /* Add a border to make it more prominent */
+            font-size: 1.2rem; /* Increase font size slightly */
+            background-color: #ffeb3b; /* Slightly adjust the background color for better aesthetics */
+        }
+        
         .card-img {
             width: 100%;
             height: auto;
             object-fit: cover;
         }
-
+        
         .carousel-inner img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
-
+        
         .carousel-control-prev, .carousel-control-next {
             align-items: center;
         }
-
+        
         .carousel-control-prev-icon, .carousel-control-next-icon {
             width: 30px;
             height: 30px;
         }
-
+        
         /* Custom styles to ensure all images have the same aspect ratio */
         .carousel-item {
             position: relative;
             width: 100%;
             padding-top: 56.25%; /* 16:9 aspect ratio */
         }
-
+        
         .carousel-item img {
             position: absolute;
             top: 0;
@@ -42,20 +102,29 @@
             height: 100%;
             object-fit: cover;
         }
-
+        
         .blog-box {
             height: 450px; /* Fixed height for the blog boxes */
             overflow: hidden; /* Ensure content does not overflow */
         }
-
+        
         .blog-box img {
             height: 100%; /* Ensure image fills the height of the box */
             object-fit: cover;
         }
+        .navbar.bg-dark {
+            background-color: #000000 !important;
+        }
+        
+        .navbar .navbar-brand,
+        .navbar .nav-link {
+            color: #ffffff !important;
+        }
+        
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-body">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Ani World</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -275,7 +344,30 @@
         </div>
     </div>
     <footer class="container py-5">
-        <div class="row">
+        <footer class="yellow-bg text-light py-4">
+            <div class="container-fluid">
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-md-10">
+                        <div class="row justify-content-center align-items-center">
+                            <div class="col-md-8 text-center mb-3 mb-md-0">
+                                <div class="yellow-bg p-3 rounded text-center">
+                                    <h4 style="font-family: 'Times New Roman', serif; text-transform: uppercase;">JOIN ANI WORLD AND GET 15% OFF. SIGN UP FOR FREE.</h4>
+                                </div>
+                            </div>
+                            <div class="col-md-4 text-md-end">
+                                <div class="col-md-8 mb-3 mb-md-0"></div>
+                                <button class="btn btn-dark" data-bs-toggle="modal" style="font-family: 'Times New Roman', serif;" data-bs-target="#signupmodal">Sign Up</button>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        
+        
+        
+        <div class="row mt-4">
             <div class="col-12 col-md">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mb-2" role="img" viewBox="0 0 24 24"><title>Product</title><circle cx="12" cy="12" r="10"></circle><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"></path></svg>
                 <small class="d-block mb-3 text-muted">© 2017–2024</small>
@@ -311,6 +403,7 @@
             </div>
         </div>
     </footer>
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script>
         // Enable login button when form is valid
